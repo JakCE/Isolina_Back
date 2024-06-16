@@ -5,6 +5,10 @@ import { UsuariosModule } from './usuarios/usuarios.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { ZonasModule } from './zonas/zonas.module';
+import { SedesModule } from './sedes/sedes.module';
+import { ReservasModule } from './reservas/reservas.module';
+import { PedidosModule } from './pedidos/pedidos.module';
+import { MesasModule } from './mesas/mesas.module';
 
 @Module({
   imports: [
@@ -20,7 +24,11 @@ import { ZonasModule } from './zonas/zonas.module';
     }),
     UsuariosModule,
     AuthModule,
-    ZonasModule],
+    ZonasModule,
+    SedesModule,
+    ReservasModule,
+    PedidosModule,
+    MesasModule],
   controllers: [AppController],
   providers: [AppService],
 })
