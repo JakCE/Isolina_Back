@@ -9,16 +9,26 @@ import { SedesModule } from './sedes/sedes.module';
 import { ReservasModule } from './reservas/reservas.module';
 import { PedidosModule } from './pedidos/pedidos.module';
 import { MesasModule } from './mesas/mesas.module';
+import { DetalleReservasModule } from './detalle-reservas/detalle-reservas.module';
+import { DetallePedidosModule } from './detalle-pedidos/detalle-pedidos.module';
+import { ColaboradoresModule } from './colaboradores/colaboradores.module';
+import { CartaModule } from './carta/carta.module';
+import { CargosModule } from './cargos/cargos.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'rypc-azure-mysql.mysql.database.azure.com',
+      /*host: 'rypc-azure-mysql.mysql.database.azure.com',
       port: 3306,
       username: 'adminrypc',
       password: 'RyPCazuredatabase1',
-      database: 'isolinadb',
+      database: 'isolinadb',*/
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'jakadmindev',
+      database: 'pruebadb',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: false
     }),
@@ -28,7 +38,13 @@ import { MesasModule } from './mesas/mesas.module';
     SedesModule,
     ReservasModule,
     PedidosModule,
-    MesasModule],
+    MesasModule,
+    DetalleReservasModule,
+    DetallePedidosModule,
+    ColaboradoresModule,
+    CartaModule,
+    CargosModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
