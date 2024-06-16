@@ -14,11 +14,11 @@ import { MesasModule } from './mesas/mesas.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'rypc-azure-mysql.mysql.database.azure.com',
       port: 3306,
-      username: 'root',
-      password: 'jakadmindev',
-      database: 'pruebadb',
+      username: 'adminrypc',
+      password: 'RyPCazuredatabase1',
+      database: 'isolinadb',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: false
     }),
@@ -32,4 +32,17 @@ import { MesasModule } from './mesas/mesas.module';
   controllers: [AppController],
   providers: [AppService],
 })
+/*
+
+TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'jakadmindev',
+      database: 'pruebadb',
+      synchronize: false
+    }),
+
+*/
 export class AppModule {}
