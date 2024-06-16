@@ -19,16 +19,11 @@ import { CargosModule } from './cargos/cargos.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      /*host: 'rypc-azure-mysql.mysql.database.azure.com',
+      host: 'rypc-azure-mysql.mysql.database.azure.com',
       port: 3306,
       username: 'adminrypc',
       password: 'RyPCazuredatabase1',
-      database: 'isolinadb',*/
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'jakadmindev',
-      database: 'pruebadb',
+      database: 'isolinadb',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: false
     }),
