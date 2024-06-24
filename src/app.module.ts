@@ -44,6 +44,12 @@ import { CargosModule } from './cargos/cargos.module';
   providers: [AppService],
 })
 /*
+      type: 'mysql',
+      host: 'rypc-azure-mysql.mysql.database.azure.com',
+      port: 3306,
+      username: 'adminrypc',
+      password: 'RyPCazuredatabase1',
+      database: 'isolinadb',
 
 TypeOrmModule.forRoot({
       type: 'mysql',
